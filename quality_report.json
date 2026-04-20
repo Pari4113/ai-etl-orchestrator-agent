@@ -1,0 +1,132 @@
+{
+  "timestamp": "2026-04-20T13:04:24.118266",
+  "layers": [
+    {
+      "layer": "bronze",
+      "passed": 3,
+      "failed_critical": 0,
+      "failed_warning": 0,
+      "checks": [
+        {
+          "name": "bronze_insurance_row_count",
+          "description": "Bronze insurance should have at least 5000 rows",
+          "severity": "critical",
+          "value": 10000,
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "name": "bronze_employees_row_count",
+          "description": "Bronze employees should have at least 500 rows",
+          "severity": "critical",
+          "value": 1200,
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "name": "bronze_vendors_row_count",
+          "description": "Bronze vendors should have at least 100 rows",
+          "severity": "critical",
+          "value": 600,
+          "passed": true,
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "layer": "silver",
+      "passed": 5,
+      "failed_critical": 0,
+      "failed_warning": 1,
+      "checks": [
+        {
+          "name": "silver_transaction_id_unique",
+          "description": "TRANSACTION_ID must be unique in silver_insurance",
+          "severity": "critical",
+          "value": 0,
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "name": "silver_claim_amount_positive",
+          "description": "CLAIM_AMOUNT must be positive",
+          "severity": "critical",
+          "value": 0,
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "name": "silver_age_valid_range",
+          "description": "AGE should be between 18 and 100",
+          "severity": "warning",
+          "value": 0,
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "name": "silver_claim_dates_valid",
+          "description": "LOSS_DT should be <= REPORT_DT",
+          "severity": "critical",
+          "value": 0,
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "name": "silver_agent_id_referential",
+          "description": "All AGENT_IDs in claims must exist in silver_employees",
+          "severity": "warning",
+          "value": 53,
+          "passed": false,
+          "status": "FAIL"
+        },
+        {
+          "name": "silver_claim_amount_null_pct",
+          "description": "CLAIM_AMOUNT should have 0% nulls in silver",
+          "severity": "critical",
+          "value": 0.0,
+          "passed": true,
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "layer": "gold",
+      "passed": 3,
+      "failed_critical": 0,
+      "failed_warning": 0,
+      "checks": [
+        {
+          "name": "gold_state_summary_nonempty",
+          "description": "gold_state_risk_summary should have rows",
+          "severity": "critical",
+          "value": 16,
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "name": "gold_total_matches_silver",
+          "description": "Gold total claim amount should equal Silver's",
+          "severity": "critical",
+          "value": 0,
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "name": "gold_agent_performance_valid",
+          "description": "Every agent in gold should have at least 1 claim",
+          "severity": "warning",
+          "value": 0,
+          "passed": true,
+          "status": "PASS"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_checks": 12,
+    "total_passed": 11,
+    "total_critical_failures": 0,
+    "total_warnings": 1,
+    "pipeline_healthy": true
+  }
+}
