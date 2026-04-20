@@ -1,0 +1,21 @@
+# Virtual environment
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# DuckDB warehouse
+warehouse/*.db
+
+# OS
+.DS_Store
+Thumbs.db

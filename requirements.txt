@@ -1,0 +1,8 @@
+pandas
+duckdb
+python-dotenv
+langchain
+langgraph
+langchain-groq
+streamlit
+faker
