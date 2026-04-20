@@ -4,6 +4,13 @@ Keeps all paths and settings in one place.
 """
 
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# ---------- API KEYS ----------
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 # ---------- PROJECT PATHS ----------
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
