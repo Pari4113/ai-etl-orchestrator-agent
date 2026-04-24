@@ -18,6 +18,8 @@ AI reports: "Pipeline completed. 11/12 checks passed. 1 warning..."
 
 ---
 
+> 📺 **[Watch the Demo Video](LOOM_LINK_HERE)**
+
 ## 🏗️ Architecture
 
 Raw CSVs  →  BRONZE (raw)  →  SILVER (cleaned & joined)  →  GOLD (business aggregates)
