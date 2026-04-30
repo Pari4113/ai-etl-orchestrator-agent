@@ -18,7 +18,7 @@ AI reports: "Pipeline completed. 11/12 checks passed. 1 warning..."
 
 ---
 
-> 📺 **[Watch the Demo Video]([https://www.loom.com/share/6782c8489c7b418f8029e826f4b905cb])**
+> 📺 **[Watch the Demo Video](https://www.loom.com/share/6782c8489c7b418f8029e826f4b905cb)**
 
 ## 🏗️ Architecture
 
