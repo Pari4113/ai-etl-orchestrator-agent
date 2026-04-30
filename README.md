@@ -20,6 +20,8 @@ AI reports: "Pipeline completed. 11/12 checks passed. 1 warning..."
 
 ## 🏗️ Architecture
 
+![Architecture Diagram](docs/architecture.png)
+
 Raw CSVs  →  BRONZE (raw)  →  SILVER (cleaned & joined)  →  GOLD (business aggregates)
 ↓                    ↓                            ↓
 Quality checks on every layer • AI-powered orchestration • Self-healing
